@@ -72,5 +72,13 @@ ORDER BY users.id ASC;
 ALTER TABLE users
 MODIFY COLUMN password varchar(250) NOT NULL;
 
--- mi prueba
+-- Añadir pinceles al usuario3
 SELECT * FROM users;
+SELECT * FROM brushes;
+SELECT * FROM user_brushes;
+INSERT INTO 
+	user_brushes
+		(fkUser, fkBrush, tried, recommend)
+VALUES 	
+	( 6, 1, FALSE, NULL ),
+	( 6, 3, TRUE, 'Carísimo, pero es maravilloso' )

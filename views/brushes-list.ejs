@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; 
+                width: 580px; margin-inline: auto; color: rgb(73, 78, 78)}
+        h1,a { color: rgb(46, 51, 51) } h1 { font-size: 40px;} h3 { text-align: center;}
+        a, li { text-decoration: none; display:block; margin-bottom: 3rem; } a:hover { text-decoration: none; color:rgb(70, 131, 131)}
+        span { font-weight: bold;}
+    </style>
+</head>
+<body>
+    <h1>Brushes List</h1>
+    <ul class="cards">
+        <% brushesList.forEach(function(brush){ %>
+
+            <li class="card">
+                <h2 class="card__title"><span><%= brush.name %> - <%= brush.serie %></span></h2>
+                <p class="card__description"><span>Hair:</span> <%= brush.hair_type %> - <span>Hardness</span>: <%= brush.hardness %></p>
+                <p class="card__title"><span>Medium:</span> <%= brush.recommended_medium %></p>
+                <p class="card__title"><span>Price:</span> <%= brush.price %></p>
+              </li>
+        <% }) %>
+    </ul>
+    <h3>Want to see the API? Go <a style="display: inline" href="/api/brushes %>">here</a></h3>
+</body>
+</html>

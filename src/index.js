@@ -11,6 +11,10 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '25mb' }));
 
+// Para el servidor de estáticos
+app.set("view engine", "ejs");
+
+
 // Variables de entorno
 const dbUser = process.env.DB_USER;
 const dbPass = process.env.DB_PASS;
@@ -65,9 +69,9 @@ const authenticateToken = (req, res, next) => {
   next();
 };
 
-// Endpoints ----------------------------------------------------
+// Endpoints ---------------------------------------------------------
 
-// Login y Registro ------------------------------
+// Login, Registro y acceso mediante authenticateToken ---------------
 
 // Registro
 app.post("/api/register", async (req, res) => {
@@ -384,3 +388,17 @@ app.delete("/api/brushes/:id", async (req, res) => {
     });
   }
 });
+
+// Servidor de Estáticos -----------------------------------------------
+app.get('/', async (req, res) => {
+
+  const queryBrushes = "SELECT * FROM brushes";
+
+  const conn = await getConnection(); 
+  // 3.- Ejecutar la query
+  const [results] = await conn.query(queryBrushes); 
+
+  conn.end();
+
+  res.render('brushes-list', { brushesList: results })
+})
