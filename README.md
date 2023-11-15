@@ -19,10 +19,10 @@ datos con variables de entorno (dotenv).
 
 3: API RESTful
 Definir las rutas y endpoints correspondientes:
-- [ ] Insertar una entrada en la entidad principal.
-- [ ] Leer/Listar todas las entradas existentes.
-- [ ] Actualizar una entrada existente.
-- [ ] Eliminar una entrada existente.
+- [X] Insertar una entrada en la entidad principal.
+- [X] Leer/Listar todas las entradas existentes.
+- [X] Actualizar una entrada existente.
+- [X] Eliminar una entrada existente.
 
 ### Bonus
 
