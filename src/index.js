@@ -3,6 +3,9 @@ const cors = require('cors');
 const mysql = require('mysql2/promise');
 require("dotenv").config();
 
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+
 // Crear y configurar el servidor
 const app = express();
 app.use(cors());
@@ -35,7 +38,7 @@ app.listen(port, () => {
 });
 
 // Endpoints ---------------------------------------
-// Obtener todos los pinteles (GET /api/pinceles)
+// Obtener todos los pinteles (GET /api/brushes)
 app.get("/api/brushes", async (req, res) => {
 
   const conn = await getConnection();
@@ -50,7 +53,7 @@ app.get("/api/brushes", async (req, res) => {
   });
 });
 
-//Obtener un pincel por su ID (GET /api/pinceles/:id)
+//Obtener un pincel por su ID (GET /api/brushes/:id)
 app.get("/api/brushes/:id", async (req, res) => {
 
   const idBrush = req.params.id;
@@ -156,7 +159,7 @@ app.post("/api/brushes", async (req, res) => {
   }
 });
 
-// Actualizar/Modificar un pincel existente (PUT /api/pinceles/:id)
+// Actualizar/Modificar un pincel existente (PUT /api/brushes/:id)
 app.put("/api/brushes/:id", async (req, res) => {
   // Queries
   const sqlFullQuery = "UPDATE brushes SET name=?, serie=?, hair_type=?, hardness=?, recommended_medium=?, price=? WHERE id=?";
@@ -216,7 +219,7 @@ app.put("/api/brushes/:id", async (req, res) => {
   } 
 });
 
-//Eliminar un pincel (DELETE /api/pinceles/:id)
+//Eliminar un pincel (DELETE /api/brushes/:id)
 app.delete("/api/brushes/:id", async (req, res) => {
   //Obtener el id del req.params
   const idBrush = req.params.id;
