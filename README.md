@@ -3,6 +3,77 @@
 # Desarrollo de una API REST personalizada
 El ejercicio consiste en desarrollar una API que permita insertar, modificar, listar y eliminar información utilizando Express.js, Node.js y una base de datos (MySQL)
 
+### INSTRUCCIONES PARA NAVEGAR POR LA API:
+
+#### Consultar la lista de pinceles - GET/api/brushes
+      https://brushesapi.onrender.com/api/brushes 
+#### Consultar un pincel - GET/api/brushes/:id
+      https://brushesapi.onrender.com/api/brushes/(id_del_pincel)
+#### Para añadir un pincel - POST/api/brushes
+*Desde Postman o RapidAPI:*
+    
+    POST https://brushesapi.onrender.com/api/brushes
+
+    Body JSON de ejemplo:
+    {
+        "name": "Pincel_1",
+        "serie": "0001",
+        "hair_type": "synthethic",
+        "hardness": "hard",
+        "recommended_medium": "acrylic",
+        "price": "afforable"
+    } 
+
+#### Para actualizar un pincel - PUT/api/brushes/:id
+*Desde Postman o RapidAPI:*
+
+    PUT https://brushesapi.onrender.com/api/brushes
+
+    Body JSON de ejemplo:
+    {
+        "name": "Pincel_1",
+        "serie": "0001",
+        "hair_type": "natural",
+        "hardness": "medium",
+        "recommended_medium": "gouache",
+        "price": "expensive"
+    } 
+#### Para eliminar un pincel - DELETE/api/brushes/:id
+*Desde Postman o RapidAPI:*
+
+    DELETE https://brushesapi.onrender.com/api/brushes/(id_del_pincel)
+
+#### Para registrarse como usuario - POST/login
+*Desde Postman o RapidAPI:*
+
+    POST https://brushesapi.onrender.com/register
+
+    Body JSON de ejemplo: (a rellenar)
+    {
+    "name": "",
+    "email": "",
+    "password": ""
+    }
+
+#### Para hacer login como usuario - POST/login
+*Desde Postman o RapidAPI:*
+
+    POST https://brushesapi.onrender.com/login
+
+    Body JSON de ejemplo: (usuario funcional)
+    {
+    "name": "usuario3",
+    "password": "usuario3_1234"
+    }
+
+#### Acceso mediante token - POST/user_brushes
+*Desde Postman o RapidAPI:*
+
+    POST http://localhost:3005/user_brushes
+
+    Headers de ejemplo: (usuario funcional)
+    Authorization eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidXN1YXJpbzMiLCJpZCI6NiwiaWF0IjoxNzAwMDQ1MDYzLCJleHAiOjE3MDAwNDg2NjN9.V7e6Vs3qH9hENUR4k0lfohcP1pTwv0cdA0uIgSP9SfY
+
 ### Objetivos:
 
 1: Diseño de la Base de Datos para la API

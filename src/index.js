@@ -74,7 +74,7 @@ const authenticateToken = (req, res, next) => {
 // Login, Registro y acceso mediante authenticateToken ---------------
 
 // Registro
-app.post("/api/register", async (req, res) => {
+app.post("/register", async (req, res) => {
   const { name, password, email } = req.body;
 
   const passwordHashed = await bcrypt.hash(password, 10); 
@@ -109,7 +109,7 @@ app.post("/api/register", async (req, res) => {
 });
 
 // Login
-app.post("/api/login", async (req, res) => {
+app.post("/login", async (req, res) => {
   const name = req.body.name;
   const password = req.body.password;
 
@@ -149,7 +149,7 @@ app.post("/api/login", async (req, res) => {
 });
 // module.exports = app;
 
-app.get("/api/user_brushes", authenticateToken, async (req, res) => {
+app.get("/user_brushes", authenticateToken, async (req, res) => {
 
   const UserId = req.user.id;
   const UserName = req.user.name;
