@@ -27,9 +27,9 @@ Definir las rutas y endpoints correspondientes:
 ### Bonus
 
 Sistema de autenticación con JWT (registro y inicio de sesión):
-- [ ] Permitir el registro de un nuevo usuario.
-- [ ] Permitir que un usuario existente inicie sesión.
-- [ ] Implementar un middleware de autenticación que verifique el token JWT en cada solicitud del API.
+- [X] Permitir el registro de un nuevo usuario.
+- [X] Permitir que un usuario existente inicie sesión.
+- [X] Implementar un middleware de autenticación que verifique el token JWT en cada solicitud del API.
 
 Algunos extras:
 

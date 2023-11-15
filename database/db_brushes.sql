@@ -32,6 +32,7 @@ CREATE TABLE
 
 SHOW TABLES;
 SELECT * FROM brushes;
+SELECT * FROM brushes WHERE id = 1;
 SELECT * FROM users;
 SELECT * FROM user_brushes;
 
@@ -66,3 +67,10 @@ ON users.id = user_brushes.fkUser
 INNER JOIN brushes
 ON brushes.id = user_brushes.fkBrush
 ORDER BY users.id ASC;
+
+-- el password de users solo tenía 45 caracteres y al hacer el Hash no almacenaba toda la contraseña nueva
+ALTER TABLE users
+MODIFY COLUMN password varchar(250) NOT NULL;
+
+-- mi prueba
+SELECT * FROM users;
