@@ -79,6 +79,8 @@ SELECT * FROM user_brushes;
 INSERT INTO 
 	user_brushes
 		(fkUser, fkBrush, tried, recommend)
-VALUES 	
+/* VALUES 	
 	( 6, 1, FALSE, NULL ),
-	( 6, 3, TRUE, 'Carísimo, pero es maravilloso' )
+	( 6, 3, TRUE, 'Carísimo, pero es maravilloso' ); */
+    
+SELECT * FROM users;

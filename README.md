@@ -72,7 +72,7 @@ El ejercicio consiste en desarrollar una API que permita insertar, modificar, li
     POST http://localhost:3005/user_brushes
 
     Headers de ejemplo: (usuario funcional)
-    Authorization eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidXN1YXJpbzMiLCJpZCI6NiwiaWF0IjoxNzAwMDQ1MDYzLCJleHAiOjE3MDAwNDg2NjN9.V7e6Vs3qH9hENUR4k0lfohcP1pTwv0cdA0uIgSP9SfY
+    Authorization eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidXN1YXJpbzMiLCJpZCI6NiwiaWF0IjoxNzAwMDUzOTU2LCJleHAiOjE3MDAwNTc1NTZ9.7KJ1xTCLyJBUFp56mrRnkD7h40HAfggL2TYAPxFr02o
 
 ### Objetivos:
 
