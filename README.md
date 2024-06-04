@@ -105,7 +105,7 @@ Sistema de autenticación con JWT (registro y inicio de sesión):
 Algunos extras:
 
 - [X] Añadir un servidor de estáticos.
-- [ ] Subir el servidor de la API a algún servicio para que esté disponible en Internet.
+- [X] Subir el servidor de la API a algún servicio para que esté disponible en Internet.
 - [ ] ~~Instalar y configurar la librería Swagger para generar una página web con la documentación de los endpoints de la API~~
 - [ ] ~~Hacer testing~~
 
